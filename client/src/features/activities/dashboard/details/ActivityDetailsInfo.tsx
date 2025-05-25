@@ -57,7 +57,7 @@ export default function ActivityDetailsInfo({ activity }: Props) {
         <Box sx={{ height: 400, zIndex: 1000, display: "block" }}>
           <MapComponent
             position={[activity.latitude, activity.longitude]}
-            venue={activity.department}
+            department={activity.department}
           />
         </Box>
       )}

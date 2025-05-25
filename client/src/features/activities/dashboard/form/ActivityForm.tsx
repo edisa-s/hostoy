@@ -1,7 +1,6 @@
 import { Box, Button, Paper, TextField, Typography } from "@mui/material";
 import { useActivities } from "../../../../lib/hooks/useActivities";
 import { useNavigate, useParams } from "react-router";
-import { Activity } from "../../../../lib/types";
 import { FormEvent } from "react";
 
 export default function ActivityForm() {
@@ -38,7 +37,7 @@ export default function ActivityForm() {
   return (
     <Paper sx={{ borderRadius: 3, padding: 3 }}>
       <Typography variant="h5" gutterBottom color="primary">
-        {activity ? "Edit activity" : "Create activity"}
+        {activity ? "Edit activity" : "Create Appointment/Event"}
       </Typography>
       <Box
         component="form"
@@ -72,8 +71,8 @@ export default function ActivityForm() {
         />
         <TextField name="city" label="City" defaultValue={activity?.city} />
         <TextField
-          name="venue"
-          label="Venue"
+          name="department"
+          label="Department"
           defaultValue={activity?.department}
         />
         <Box display="flex" justifyContent="end" gap={3}>

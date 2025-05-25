@@ -49,7 +49,7 @@ export default function PhotoUploadWidget({ uploadPhoto, loading }: Props) {
           {...getRootProps()}
           sx={{
             border: "dashed 3px #eee",
-            borderColor: isDragActive ? "green" : "#eee",
+            borderColor: isDragActive ? "pink" : "#eee",
             borderRadius: "5px",
             paddingTop: "30px",
             textAlign: "center",

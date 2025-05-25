@@ -25,7 +25,7 @@ export default function NavBar() {
         position="static"
         sx={{
           backgroundImage:
-            "linear-gradient(135deg, #182a73 0%, #218aae 69%, #20a7ac 89%)",
+            "linear-gradient(135deg, #9b59b6 0%, #e91e63 70%, #f48fb1 90%)",
           position: "relative",
         }}
       >
@@ -44,7 +44,7 @@ export default function NavBar() {
               </MenuItem>
             </Box>
             <Box sx={{ display: "flex" }}>
-              <MenuItemLink to="/activities">Activities</MenuItemLink>
+              <MenuItemLink to="/activities">Appointments</MenuItemLink>
               <Box display="flex" alignItems="center">
                 {currentUser ? (
                   <UserMenu />

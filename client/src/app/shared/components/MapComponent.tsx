@@ -3,10 +3,10 @@ import "leaflet/dist/leaflet.css";
 
 type Props = {
   position: [number, number];
-  venue: string;
+  department: string;
 };
 
-export default function MapComponent({ position, venue }: Props) {
+export default function MapComponent({ position, department }: Props) {
   return (
     <MapContainer
       center={position}
@@ -16,7 +16,7 @@ export default function MapComponent({ position, venue }: Props) {
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <Marker position={position}>
-        <Popup>{venue}</Popup>
+        <Popup>{department}</Popup>
       </Marker>
     </MapContainer>
   );

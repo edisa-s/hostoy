@@ -53,7 +53,7 @@ export default function UserMenu() {
           <ListItemIcon>
             <Add />
           </ListItemIcon>
-          <ListItemText>Create Appointment</ListItemText>
+          <ListItemText>Create Event</ListItemText>
         </MenuItem>
         <MenuItem
           component={Link}

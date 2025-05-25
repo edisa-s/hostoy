@@ -15,7 +15,8 @@ export default function HomePage() {
         justifyContent: "center",
         height: "100vh",
         backgroundImage:
-          "linear-gradient(135deg, #182a73 0%, #218aae 69%, #20a7ac 89%)",
+          "linear-gradient(135deg, #9c27b0 0%, #e040fb 69%, #f48fb1 89%)",
+        position: "relative",
       }}
     >
       <Box
@@ -30,15 +31,16 @@ export default function HomePage() {
         <Group sx={{ height: 110, width: 110 }} />
         <Typography variant="h1">Esto</Typography>
       </Box>
-      <Typography variant="h2">Welcome to reactivities</Typography>
+      <Typography variant="h2">Welcome</Typography>
       <Button
         component={Link}
         to="/activities"
         size="large"
         variant="contained"
+        color="secondary"
         sx={{ height: 80, borderRadius: 4, fontSize: "1.5rem" }}
       >
-        Take me to the appointments!
+        Take me to appointments!
       </Button>
     </Paper>
   );

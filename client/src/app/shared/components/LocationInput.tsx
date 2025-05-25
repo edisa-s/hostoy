@@ -1,6 +1,5 @@
 import type { FieldValues, UseControllerProps } from "react-hook-form";
 import { useController } from "react-hook-form";
-import type { LocationIQSuggestion } from "../../../lib/types";
 
 import {
   Box,
@@ -25,7 +24,7 @@ export default function LocationInput<T extends FieldValues>(props: Props<T>) {
 
   useEffect(() => {
     if (field.value && typeof field.value === "object") {
-      setInputValue(field.value.venue || "");
+      setInputValue(field.value.department || "");
     } else {
       setInputValue(field.value || "");
     }
@@ -68,12 +67,12 @@ export default function LocationInput<T extends FieldValues>(props: Props<T>) {
       location.address?.city ||
       location.address?.town ||
       location.address?.village;
-    const venue = location.display_name;
+    const department = location.display_name;
     const latitude = location.lat;
     const longitude = location.lon;
 
-    setInputValue(venue);
-    field.onChange({ city, venue, latitude, longitude });
+    setInputValue(department);
+    field.onChange({ city, department, latitude, longitude });
     setSuggestions([]);
   };
 

@@ -23,7 +23,7 @@ export default function ActivityDetailsSidebar({ activity }: Props) {
         sx={{
           textAlign: "center",
           border: "none",
-          backgroundColor: "primary.main",
+          backgroundColor: "pink",
           color: "white",
           p: 2,
         }}

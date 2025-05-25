@@ -78,7 +78,7 @@ export default function RegisterForm() {
       </Button>
       <Typography sx={{ textAlign: "center" }}>
         Already have an account?
-        <Typography sx={{ ml: 2 }} component={Link} to="/login" color="primary">
+        <Typography sx={{ ml: 2 }} component={Link} to="/login" color="pink">
           Sign in
         </Typography>
       </Typography>

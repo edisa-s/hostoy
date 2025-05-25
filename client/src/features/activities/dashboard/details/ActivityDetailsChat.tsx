@@ -50,7 +50,7 @@ export default function ActivityDetailsChat() {
                     variant="subtitle1"
                     sx={{ fontWeight: "bold", textDecoration: "none" }}
                   >
-                    Bob
+                    Eda
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
                     2 hours ago
@@ -58,7 +58,7 @@ export default function ActivityDetailsChat() {
                 </Box>
 
                 <Typography sx={{ whiteSpace: "pre-wrap" }}>
-                  Comment goes here
+                  Comment 
                 </Typography>
               </Box>
             </Box>
