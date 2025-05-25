@@ -13,7 +13,6 @@ using Application.Interfaces;
 using Infrastructure.Security;
 
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

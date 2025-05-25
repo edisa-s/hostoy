@@ -11,4 +11,6 @@ public class User : IdentityUser
 
 
 public ICollection<ActivityAttendee> Activities {get; set;} = [];
+
+
 }
