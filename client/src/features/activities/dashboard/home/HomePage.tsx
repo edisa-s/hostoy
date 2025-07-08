@@ -29,7 +29,7 @@ export default function HomePage() {
         }}
       >
         <Group sx={{ height: 110, width: 110 }} />
-        <Typography variant="h1">Esto</Typography>
+        <Typography variant="h1">Estto</Typography>
       </Box>
       <Typography variant="h2">Welcome</Typography>
       <Button
@@ -40,7 +40,7 @@ export default function HomePage() {
         color="secondary"
         sx={{ height: 80, borderRadius: 4, fontSize: "1.5rem" }}
       >
-        Take me to appointments!
+        Take me to Estto
       </Button>
     </Paper>
   );

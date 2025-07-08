@@ -1,8 +1,8 @@
 import {
   AppBar,
   Box,
+  CircularProgress,
   Container,
-  LinearProgress,
   MenuItem,
   Toolbar,
   Typography,
@@ -22,11 +22,10 @@ export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
-        position="static"
+        position="fixed"
         sx={{
           backgroundImage:
-            "linear-gradient(135deg, #9b59b6 0%, #e91e63 70%, #f48fb1 90%)",
-          position: "relative",
+            "linear-gradient(135deg, #b24592 0%, #f15f79 69%, #ff9a9e 89%)",
         }}
       >
         <Container maxWidth="xl">
@@ -38,13 +37,33 @@ export default function NavBar() {
                 sx={{ display: "flex", gap: 2 }}
               >
                 <Group fontSize="large" />
-                <Typography variant="h4" fontWeight="bold">
-                  Esto
+                <Typography
+                  sx={{ position: "relative" }}
+                  variant="h4"
+                  fontWeight="bold"
+                >
+                  Estto
                 </Typography>
+                <Observer>
+                  {() =>
+                    uiStore.isLoading ? (
+                      <CircularProgress
+                        size={20}
+                        thickness={7}
+                        sx={{
+                          color: "white",
+                          position: "absolute",
+                          top: "30%",
+                          left: "105%",
+                        }}
+                      />
+                    ) : null
+                  }
+                </Observer>
               </MenuItem>
             </Box>
             <Box sx={{ display: "flex" }}>
-              <MenuItemLink to="/activities">Appointments</MenuItemLink>
+              <MenuItemLink to="/activities">Events</MenuItemLink>
               <Box display="flex" alignItems="center">
                 {currentUser ? (
                   <UserMenu />
@@ -58,23 +77,6 @@ export default function NavBar() {
             </Box>
           </Toolbar>
         </Container>
-
-        <Observer>
-          {() =>
-            uiStore.isLoading ? (
-              <LinearProgress
-                color="secondary"
-                sx={{
-                  position: "absolute",
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  height: 4,
-                }}
-              />
-            ) : null
-          }
-        </Observer>
       </AppBar>
     </Box>
   );

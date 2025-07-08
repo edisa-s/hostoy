@@ -41,6 +41,7 @@ namespace API.Controllers
         {
             return HandleResult(await Mediator.Send(new GetProfile.Query { UserId = userId }));
         }
+
         [HttpPut]
         public async Task<ActionResult> UpdateProfile(EditProfile.Command command)
         {
@@ -50,15 +51,26 @@ namespace API.Controllers
         [HttpPost("{userId}/follow")]
         public async Task<ActionResult> FollowToggle(string userId)
         {
-        return HandleResult(await Mediator
-            .Send(new FollowToggle.Command{TargetUserId = userId}));
+            return HandleResult(await Mediator
+                .Send(new FollowToggle.Command { TargetUserId = userId }));
         }
 
         [HttpGet("{userId}/follow-list")]
         public async Task<ActionResult> GetFollowings(string userId, string predicate)
         {
-        return HandleResult(await Mediator.Send(new GetFollowings.Query{UserId = userId, 
-            Predicate = predicate}));
+
+            return HandleResult(await Mediator.Send(new GetFollowings.Query
+            {
+                UserId = userId,
+                Predicate = predicate
+            }));
+        }
+
+        [HttpGet("{userId}/activities")]
+        public async Task<IActionResult> GetUserActivities(string userId, string filter)
+        {
+            return HandleResult(await Mediator.Send(new GetUserActivities.Query
+            { UserId = userId, Filter = filter }));
         }
     }
 }
